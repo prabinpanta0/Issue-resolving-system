@@ -1,0 +1,196 @@
+/* List card */
+
+.list-container {
+    --clr: #e3edf1f0;
+    --clr-text: #1C1D21;
+    --clr1: #018E42;
+    background-color: var(--clr);
+    padding: 1em;
+    padding-bottom: 1.1em;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid var(--clr);
+    outline-offset: 3px;
+    width: 90%;
+}
+
+.top-bar {
+    list-style: none;
+    color: #2f50d0;
+    text-align: center;
+}
+
+.item {
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+}
+
+
+
+.item:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(99, 180, 246, 0.838);
+    --clr-text: #FDFFFC;
+}
+
+
+/* Create button  */
+.create-btn {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #4dc7d9 0%, #66a6ff 100%);
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    height: 90%;
+}
+
+.create-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.create-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.create-btn span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+}
+
+.create-btn.svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+
+.create-btn:hover.svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Action link  */
+.action-btn {
+    font-family: monospace;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 6px 20px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.action-btn:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+/* Pagination button  */
+.page-btn {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #3b83f65f;
+    padding: 5px 10px;
+    font-family: monospace;
+    font-size: 17px;
+    color: #3b82f6;
+    text-decoration: none;
+    border-radius: 0.4em;
+    transition: 0.5s;
+    width: 37px;
+    height: 37px;
+}
+
+.page-btn:hover {
+    background-color: #3b82f6;
+    color: #fff;
+    box-shadow: 0 0 0 5px #3b83f65f;
+}
+
+.page-btn:active {
+    transform: scale(0.95);
+}
+
+.icon-conatiner {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 20px 20px 15px 0 #ababab4d;
+    cursor: pointer;
+}
+
+.icon-conatiner svg {
+    width: 50px;
+    height: auto;
+}
+
+.icon-conatiner svg:last-child {
+    position: absolute;
+}
+
+.icon-conatiner:active {
+    animation: press 0.2s 1 linear;
+}
+
+.icon-conatiner:active svg:last-child {
+    animation: bounce 0.2s 1 linear;
+}
+
+.text {
+    color: #666;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    user-select: none;
+}
+
+@keyframes press {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.92);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    50% {
+        transform: rotate(5deg) translate(20px, -50px);
+    }
+
+    to {
+        transform: scale(0.9) rotate(10deg) translate(50px, -80px);
+        opacity: 0;
+    }
+}

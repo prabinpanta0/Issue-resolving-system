@@ -1,0 +1,79 @@
+﻿@model IEnumerable<BetterWorld.Models.OrganizationViewModel>
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "Organization List";
+    var userAccountType = User.FindFirstValue("AccountType");
+    var isSeeker = userAccountType == "Job Seeker";
+    var isRecruiter = userAccountType == "Recruiter";
+}
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+<link rel="stylesheet" href="~/css/listStyles.css" type="text/css" />
+
+<div class="e-card playing">
+    <div class="image"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="infotop">
+        <div class="list-container">
+            <div class="top-bar">
+
+                <h1>@ViewData["Title"]</h1>
+                <p>
+
+                    <button class="create-btn" onclick="window.location.href='organization/create'">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                +
+                            </div>
+                        </div>
+                        <span>Create</span>
+                    </button>
+                </p>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactNo)
+                        </th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="item">
+                            <td style="padding-top: 14px;">
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td style="padding-top: 14px;">
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td style="padding-top: 14px;">
+                                @Html.DisplayFor(modelItem => item.ContactNo)
+                            </td>
+                            <td>
+                                @if (isRecruiter)
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="action-btn">Edit</a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="action-btn"> Details </a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="action-btn"> Delete </a>
+                                }
+                                else if (isSeeker)
+                                {
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="action-btn"> Details </a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>

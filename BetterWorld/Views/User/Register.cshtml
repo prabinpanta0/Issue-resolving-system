@@ -1,0 +1,53 @@
+﻿@model BetterWorld.Models.UserViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+<link rel="stylesheet" href="~/css/Form.css" type="text/css" />
+
+<div class="e-card playing">
+    <div class="image"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="infotop">
+        <div class="form-container">
+            <div class="heading">Register</div>
+            <form asp-action="Register" class="form">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input asp-for="UserName" class="form-control input" placeholder="Username" />
+                </div>
+                <div class="form-group">
+                    <input asp-for="Password" type="password" class="form-control input" placeholder="Password" />
+                </div>
+                <div class="form-group">
+                    <select asp-for="AccountType" class="form-control input">
+                        <option value="">--Account type--</option>
+                        <option value="Job Seeker">Job Seeker</option>
+                        <option value="Recruiter">Recruiter</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Register" class="btn login-button" />
+                </div>
+                <p class="signin" style="font-family: raleway; font-weight:100;
+             font-size: 15px; color: #211e1ef8;">
+                    Already have an acount? <a href="~/User/Login">Login here</a> </p>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,91 @@
+﻿@model PaginatedJobViewModel
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Job List";
+    var userAccountType = User.FindFirstValue("AccountType");
+    var isSeeker = userAccountType == "Job Seeker";
+    var isRecruiter = userAccountType == "Recruiter";
+}
+
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+<link rel="stylesheet" href="~/css/listStyles.css" type="text/css" />
+
+<div class="e-card playing">
+    <div class="image"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="infotop">
+
+        <div class="list-container">
+
+            <div class="top-bar">
+                <h1>@ViewData["Title"]</h1>
+
+                @if (isRecruiter)
+                {
+
+                    <button class="create-btn" onclick="window.location.href='job/create'">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                +
+                            </div>
+                        </div>
+                        <span>Create</span>
+                    </button>
+
+
+
+                }
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>OrganizationName</th>
+                        <th>CreatedBy</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Data)
+                    {
+                        <tr class="item">
+                            <td style="padding-top: 14px;">@Html.DisplayFor(modelItem => item.Title)</td>
+                            <td style="padding-top: 14px;">@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td style="padding-top: 14px;">@Html.DisplayFor(modelItem => item.OrganizationName)</td>
+                            <td style="padding-top: 14px;">@Html.DisplayFor(modelItem => item.CreatedBy)</td>
+                            <td>
+                                @if (isRecruiter)
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="action-btn">Edit</a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="action-btn"> Details </a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="action-btn"> Delete </a>
+                                }
+                                else if (isSeeker)
+                                {
+                                    <a asp-action="Apply" asp-controller="Application" asp-route-id="@item.Id"
+                                        class="action-btn">Apply</a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="action-btn"> Details </a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div>
+                <ul class="pagination">
+                    @for (var i = 1; i <= Model.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                            <a asp-page="/pagination" asp-route-currentpage="@i" class="page-btn">@i</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

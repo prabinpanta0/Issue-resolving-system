@@ -1,0 +1,96 @@
+﻿@model BetterWorld.Models.review
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "User Details";
+    var userAccountType = User.FindFirstValue("AccountType");
+    var isSeeker = userAccountType == "Job Seeker";
+    var isRecruiter = userAccountType == "Recruiter";
+}
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+ <div class="e-card playing">
+        <div class="image"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="infotop">
+   
+<h1>Edit</h1>
+
+<h4>review</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@*             <div class="form-group">
+                <label asp-for="PicFile" class="control-label"></label>
+                <input asp-for="PicFile" type="file" class="form-control" accept=".jpg, .png" />
+                <span asp-validation-for="PicFile" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
+            @* @if (isSeeker) *@
+            @* { *@
+                <div class="form-group">
+                    <div class="form-group">
+                        <label asp-for="Skills" class="control-label"></label>
+                        <input asp-for="Skills" value="@(isSeeker ? "" : null)"  class="form-control" />
+                        <span asp-validation-for="Skills" class="text-danger"></span>
+                    </div>
+                </div>
+            @* } *@
+
+@*             else if (isRecruiter)
+            { *@
+                <div class="form-group">
+                    <label asp-for="Organization" class="control-label"></label>
+                    <select asp-for="OrganizationId">
+                        <option value="0">--SELECT--</option>  // Use empty string for default
+                        @foreach (var item in ViewBag.Organizations)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Organization" class="text-danger"></span>
+                </div>
+            @* } *@
+
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNo" class="control-label"></label>
+                <input asp-for="PhoneNo" class="form-control" />
+                <span asp-validation-for="PhoneNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bio" class="control-label"></label>
+                <input asp-for="Bio" class="form-control" />
+                <span asp-validation-for="Bio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+        </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

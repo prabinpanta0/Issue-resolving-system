@@ -1,0 +1,63 @@
+﻿@model BetterWorld.Models.JobViewModel
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "Details";
+    var userAccountType = User.FindFirstValue("AccountType");
+    var isSeeker = userAccountType == "Job Seeker";
+    var isRecruiter = userAccountType == "Recruiter";
+}
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+<link rel="stylesheet" href="~/css/listStyles.css" type="text/css" />
+
+ <div class="e-card playing">
+        <div class="image"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="infotop">
+   <div class="list-container">
+    <div class="top-bar">
+<h1>Details</h1>
+    </div>
+<div>
+    <hr style="background-color: black;" />
+    <dl class="item">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrganizationName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrganizationName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <hr style="background-color: black;"/>
+
+
+
+    @if (isRecruiter)
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="action-button">Edit</a> 
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="action-button">Delete</a>
+    }
+    else if (isSeeker)
+    {
+        <a asp-action="Apply" asp-controller="Application" asp-route-id="@Model.Id" class="action-btn">Apply</a> 
+    }
+
+                    
+    <a asp-action="Index" class="action-btn">Back to List</a>
+</div>
+        </div>

@@ -1,0 +1,90 @@
+﻿@model BetterWorld.Models.review
+
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "User Profile";
+    var userAccountType = User.FindFirstValue("AccountType");
+    var isSeeker = userAccountType == "Job Seeker";
+    var isRecruiter = userAccountType == "Recruiter";
+}
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+ <div class="e-card playing">
+        <div class="image"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="infotop">
+   
+
+<div class="container">
+    <div class="con1 bd-example card">
+        <br />
+        <!-- Profile Image -->
+        <div class="div1">
+            <div height="200px" width="200px" class="profile-picture-container">
+                <img class="rounded-circle border border-black card-img-top" height="230px" width="200px" src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Uploaded Image">
+            </div>
+        </div>
+
+
+        <br />
+        <div class="card-body">
+            <div class="row r cols-row-1">
+                <div class="cols-4">
+                    <h3 style="text-align: center">
+                        <strong>Name :</strong> @Model.UserName
+                    </h3>
+                </div>
+                <div class="cols-4">
+                    <div class="actions">
+
+                        <a  asp-controller="User" asp-action="Logout">Log out</a>
+                        <a asp-controller="User" asp-route-id="@Model.Id" asp-action="Edit">Edit</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="containe">
+
+            <div class="row r cols-row-1">
+                <div class="col-md-4">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Age: @Model.Age</li>
+                        <li class="list-group-item">
+                            @if (isSeeker)
+                            {
+                                <span>Skills: @Model.Skills</span>
+                            }
+                            else if (isRecruiter)
+                            {
+                                <span> Organization: @Model.Organization</span>
+
+                            }
+                        </li>
+                        <li class="list-group-item">Location: @Model.Location</li>
+                        <li class="list-group-item">Email: @Model.Email</li>
+                        <li class="list-group-item">Phone No.: @Model.PhoneNo</li>
+                        <li class="list-group-item"></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-body bio">
+                        <h4><p>@Model.AccountType</p></h4>
+                        <hr />
+                        <h5>Bio</h5> <hr />
+                        <p class="">@Model.Bio</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+        </div>
+

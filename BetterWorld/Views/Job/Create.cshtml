@@ -1,0 +1,57 @@
+﻿@model BetterWorld.Models.JobViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/css/Form.css">
+<link rel="stylesheet" href="~/css/Card.css">
+
+ <div class="e-card playing">
+        <div class="image"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="infotop">
+ <div class="form-container">
+            <div class="heading">Create</div>
+                   <hr />
+               <form asp-action="Create" class="form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="Title" placeholder=" Position " class="form-control input" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Description" placeholder=" Description " class="form-control input" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select asp-for="OrganizationId"  class="form-control input">
+                    <option value="0">--SELECT--</option>
+                    @foreach (var item in ViewBag.Organizations)
+                    {
+                        <option value="@item.Id" >@item.Name</option>
+                    }                   
+                </select>
+                <span asp-validation-for="OrganizationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" style="width: 30%; display: inline-block;" class=" btn login-button" />
+
+                    <a asp-action="Index" style="width: 60%; display: inline-block;" class="btn login-button">Back to List</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+</div>
+        </div>
+ </div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

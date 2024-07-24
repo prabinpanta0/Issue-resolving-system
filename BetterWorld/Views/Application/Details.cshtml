@@ -1,0 +1,62 @@
+﻿@model BetterWorld.Models.ApplicationViewModel
+
+@{
+    ViewData["Title"] = "Application Details";
+}
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+<link rel="stylesheet" href="~/css/listStyles.css" type="text/css" />
+
+<div class="e-card playing">
+    <div class="image"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="infotop">
+
+        <div class="list-container">
+            <div class="top-bar">
+                <h1>Application Details</h1>
+
+            </div>
+
+            <div>
+                <hr />
+                <dl class="item" style="color: black; margin: auto;">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.JobName)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.JobName)
+                    </dd>
+                    <dt class="col-sm-2">
+                        CV File
+                    </dt>
+                    <dd class="col-sm-10">
+                        @if (Model.CVContentType != null && Model.CVFileName != null)
+                        {
+                            <a href="@Url.Action("DownloadCV", new { id = Model.Id })" target="_blank">@Model.CVFileName</a>
+                        }
+                        else
+                        {
+                            <span>No CV uploaded</span>
+                        }
+                    </dd>
+                </dl>
+            </div>
+            <div>
+                <a asp-action="Index" class="action-btn">Back to List</a>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,56 @@
+﻿@model BetterWorld.Models.OrganizationViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+<link rel="stylesheet" href="~/css/Liststyles.css" type="text/css" />
+<link rel="stylesheet" href="~/css/form.css" type="text/css" />
+
+<div class="e-card playing">
+    <div class="image"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="infotop">
+        <div class="list-container">
+            <div class="top-bar">
+                <h1>Create</h1>
+            </div>
+            <hr />
+            <div style="background-color: transparent; margin:auto;">
+                <form asp-action="Create" class="form">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label" style="color: #3b82f6;"></label>
+                        <input asp-for="Name" class="form-control input" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label" style="color: #3b82f6;"></label>
+                        <input asp-for="Address" class="form-control input " />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ContactNo" class="control-label" style="color: #3b82f6;"></label>
+                        <input asp-for="ContactNo" class="form-control input " />
+                        <span asp-validation-for="ContactNo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+
+                        <div>
+                            <a asp-action="Index" class="action-btn">Back to List</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }

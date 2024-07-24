@@ -1,0 +1,60 @@
+﻿@model BetterWorld.Models.ApplicationViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+<link rel="stylesheet" href="~/css/listStyles.css" type="text/css" />
+<div class="e-card playing">
+    <div class="image"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="infotop">
+
+        <div class="list-container">
+            <div class="top-bar">
+
+                <h1>Create Application</h1>
+            </div>
+            <hr />
+            <div class="item" style="color: black; margin: auto;">
+                <div >
+                    <form asp-action="Apply" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CVFile" class="control-label"></label>
+                            <input asp-for="CVFile" type="file" class="form-control" accept=".pdf,.docx, .jpg, .png" />
+                            <span asp-validation-for="CVFile" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="JobId" class="control-label">Job</label>
+
+                            <select asp-for="JobId" class="form-select form-select-md"
+                                asp-items="@ViewBag.Jobs"></select>
+                            <span asp-validation-for="JobId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Apply" class="action-button" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div>
+                <a asp-action="Index" class="action-btn">Back to List</a>
+            </div>
+
+        </div>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }

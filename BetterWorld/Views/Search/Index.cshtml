@@ -1,0 +1,100 @@
+﻿@model BetterWorld.Controllers.SearchViewModel
+
+@{
+    ViewData["Title"] = "Search Results";
+}
+<link rel="stylesheet" href="~/css/Card.css" type="text/css" />
+<link rel="stylesheet" href="~/css/listStyles.css" type="text/css" />
+
+<div class="e-card playing">
+    <div class="image"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="infotop">
+        <div class="list-container">
+            <div class="top-bar">
+                <h1>Search Results</h1>
+            </div>
+            <hr />
+            <div style="background-color: transparent; margin:auto;">
+
+
+                @using (Html.BeginForm("Index", "Search", FormMethod.Get))
+                {
+                    @using (Html.BeginForm("Index", "Search", FormMethod.Get))
+                    {
+                        <div class="form-group">
+                            <label  class="text" for="searchTerm">Search Term:</label>
+                            @Html.TextBox("searchTerm", ViewBag.CurrentFilter as string, new { @class = "form-control input" })
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    }
+                }
+
+                @if (!string.IsNullOrEmpty(ViewBag.CurrentFilter))
+                {
+                    <h2>Organizations</h2>
+                    if (Model.Organizations.Any())
+                    {
+                        <ul>
+                            @foreach (var org in Model.Organizations)
+                            {
+                                <li>
+                                    <h4>@org.Name</h4>
+                                    <p>Address: @org.Address</p>
+                                    <p>Contact No: @org.ContactNo</p>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No organizations found.</p>
+                    }
+
+                    <h2>Jobs</h2>
+                    if (Model.Jobs.Any())
+                    {
+                        <ul>
+                            @foreach (var job in Model.Jobs)
+                            {
+                                <li>
+                                    <h4>@job.Title</h4>
+                                    <p>Description: @job.Description</p>
+                                    <p>Organization: @job.Organization.Name</p>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No jobs found.</p>
+                    }
+
+                    <h2>Applications</h2>
+                    if (Model.Applications.Any())
+                    {
+                        <ul>
+                            @foreach (var app in Model.Applications)
+                            {
+                                <li>
+                                    <h4>Applicent: @app.User.UserName</h4>
+                                    <h4>Job: @app.Job.Title</h4>
+                                    <p>Email: @app.Email</p>
+                                    <p>Organization: @app.Job.Organization.Name</p>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No applications found.</p>
+                    }
+                }
+                else
+                {
+                    <p class="text">Please enter a search term.</p>
+                }
+            </div>
+        </div>
