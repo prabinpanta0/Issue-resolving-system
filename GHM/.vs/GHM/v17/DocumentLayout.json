@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{810D73C2-265D-42AC-B4E1-004A0106EC27}|GHM.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\ghm\\views\\all\\createmodule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{810D73C2-265D-42AC-B4E1-004A0106EC27}|GHM.csproj|solutionrelative:views\\all\\createmodule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810D73C2-265D-42AC-B4E1-004A0106EC27}|GHM.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\ghm\\views\\all\\modulelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{810D73C2-265D-42AC-B4E1-004A0106EC27}|GHM.csproj|solutionrelative:views\\all\\modulelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810D73C2-265D-42AC-B4E1-004A0106EC27}|GHM.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\ghm\\controllers\\allcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810D73C2-265D-42AC-B4E1-004A0106EC27}|GHM.csproj|solutionrelative:controllers\\allcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810D73C2-265D-42AC-B4E1-004A0106EC27}|GHM.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\ghm\\ghmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810D73C2-265D-42AC-B4E1-004A0106EC27}|GHM.csproj|solutionrelative:ghmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +59,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateModule.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\Views\\All\\CreateModule.cshtml",
+              "RelativeDocumentMoniker": "Views\\All\\CreateModule.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\Views\\All\\CreateModule.cshtml",
+              "RelativeToolTip": "Views\\All\\CreateModule.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T17:50:37.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModuleList.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\Views\\All\\ModuleList.cshtml",
+              "RelativeDocumentMoniker": "Views\\All\\ModuleList.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\Views\\All\\ModuleList.cshtml",
+              "RelativeToolTip": "Views\\All\\ModuleList.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T17:43:34.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GhmDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\GhmDbContext.cs",
+              "RelativeDocumentMoniker": "GhmDbContext.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\GhmDbContext.cs",
+              "RelativeToolTip": "GhmDbContext.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAA/wC0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T16:59:46.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AllController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\Controllers\\AllController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AllController.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GHM\\Controllers\\AllController.cs",
+              "RelativeToolTip": "Controllers\\AllController.cs",
+              "ViewState": "AQIAAMUAAAAAAAAAAAAiwM4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T16:58:37.358Z",
+              "EditorCaption": ""
             }
           ]
         }

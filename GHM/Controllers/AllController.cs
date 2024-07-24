@@ -1,6 +1,8 @@
 using GHM.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+//using Microsoft.AspNetCore.Mvc;
+
 
 namespace GHM.Controllers
 {
@@ -26,7 +28,7 @@ namespace GHM.Controllers
                 };
                 db.Modules.Add(mod);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ModuleList");
             }
             catch{
                 return View();
@@ -171,17 +173,32 @@ namespace GHM.Controllers
         public IActionResult Index()
         {
             var db = new GhmDbContext();
-            var modules = db.Modules.Count();
-            var teachers = db.Teachers.Count();
-            var feedbackQuestions = db.FeedbackQuestions.Count();
-            var feedbacks = db.Feedbacks.Count();
+            var modules = db.Modules.ToList();
+            var teachers = db.Teachers.ToList();
+            var feedbackQuestions = db.FeedbackQuestions.ToList();
+            var feedbacks = db.Feedbacks.ToList();
 
-            ViewBag.Modules = modules;
-            ViewBag.Teachers = teachers;
-            ViewBag.FeedbackQuestions = feedbackQuestions;
-            ViewBag.Feedbacks = feedbacks;
+            var viewModel = new IndexViewModel
+            {
+                Modules = modules.Select(m => new ModuleViewModel
+                {
+                    // Map properties from Module to ModuleViewModel
+                }).ToList(),
+                Teachers = teachers.Select(t => new TeacherViewModel
+                {
+                    // Map properties from Teacher to TeacherViewModel
+                }).ToList(),
+                FeedbackQuestions = feedbackQuestions.Select(fq => new FeedbackQuestionViewModel
+                {
+                    // Map properties from FeedbackQuestion to FeedbackQuestionViewModel
+                }).ToList(),
+                Feedbacks = feedbacks.Select(f => new FeedbackViewModel
+                {
+                    // Map properties from Feedback to FeedbackViewModel
+                }).ToList()
+            };
 
-            return View();
+            return View(viewModel);
         }
 
         /// Controller For Module List

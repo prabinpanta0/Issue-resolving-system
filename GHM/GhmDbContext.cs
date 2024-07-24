@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite; // Add this using directive
+using GHM.Models;
 
 namespace GHM
 {
@@ -23,6 +24,7 @@ namespace GHM
         {
             options.UseSqlite($"Data Source={DbPath}");
         }
+        public DbSet<GHM.Models.ModuleViewModel> ModuleViewModel { get; set; } = default!;
     }
 
     public class Module
