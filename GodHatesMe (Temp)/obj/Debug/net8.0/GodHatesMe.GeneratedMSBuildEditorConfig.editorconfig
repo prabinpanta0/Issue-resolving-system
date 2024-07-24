@@ -26,12 +26,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\OneDrive\Desktop\Hackthon\Issue-resolving-system\GodHatesMe (Temp)
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GodHatesMe (Temp)/Views/Main/AddIntake.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxBZGRJbnRha2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GodHatesMe (Temp)/Views/Main/AddModule.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxBZGRNb2R1bGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GodHatesMe (Temp)/Views/Main/AddProgram.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxBZGRQcm9ncmFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GodHatesMe (Temp)/Views/Main/AddSemester.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxBZGRTZW1lc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GodHatesMe (Temp)/Views/Main/AddTeacher.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxBZGRUZWFjaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GodHatesMe (Temp)/Views/Main/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GodHatesMe (Temp)/Views/Shared/Error.cshtml]

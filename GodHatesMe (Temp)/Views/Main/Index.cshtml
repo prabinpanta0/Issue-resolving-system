@@ -1,0 +1,117 @@
+﻿@model GodHatesMe.Models.IndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .create-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+    }
+    .card {
+        position: relative;
+    }
+</style>
+
+<div class="container">
+    <h1>Modules</h1>
+    <div class="row">
+        @foreach (var module in Model.Modules)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <button class="btn btn-primary create-btn" onclick="window.location.href='@Url.Action("AddModule", "Main")'">Create</button>
+                    <div class="card-body">
+                        <h5 class="card-title">@module.Name</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <h1>Semesters</h1>
+    <div class="row">
+        @foreach (var semester in Model.Semesters)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <button class="btn btn-primary create-btn" onclick="window.location.href='@Url.Action("AddSemester", "Main")'">Create</button>
+                    <div class="card-body">
+                        <h5 class="card-title">@semester.Name</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <h1>Intakes</h1>
+    <div class="row">
+        @foreach (var intake in Model.Intakes)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <button class="btn btn-primary create-btn" onclick="window.location.href='@Url.Action("AddIntake", "Main")'">Create</button>
+                    <div class="card-body">
+                        <h5 class="card-title">@intake.Name</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <h1>Programs</h1>
+    <div class="row">
+        @foreach (var program in Model.Programs)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <button class="btn btn-primary create-btn" onclick="window.location.href='@Url.Action("AddProgram", "Main")'">Create</button>
+                    <div class="card-body">
+                        <h5 class="card-title">@program.Name</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <h1>Teachers</h1>
+    <div class="row">
+        @foreach (var teacher in Model.Teachers)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <button class="btn btn-primary create-btn" onclick="window.location.href='@Url.Action("AddTeacher", "Main")'">Create</button>
+                    <div class="card-body">
+                        <h5 class="card-title">@teacher.Name</h5>
+                        <p class="card-text">Module: @teacher.ModuleName</p>
+                        <p class="card-text">Average Score: @teacher.AverageScore</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <h1>Questions</h1>
+    <div class="row">
+        @foreach (var question in Model.Questions)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <button class="btn btn-primary create-btn" onclick="window.location.href='@Url.Action("AddQuestions", "Main")'">Create</button>
+                    <div class="card-body">
+                        <p class="card-text">@question.Text1</p>
+                        <p class="card-text">@question.Text2</p>
+                        <p class="card-text">@question.Text3</p>
+                        <p class="card-text">@question.Text4</p>
+                        <p class="card-text">@question.Text5</p>
+                        <p class="card-text">@question.Text6</p>
+                        <p class="card-text">@question.Text7</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

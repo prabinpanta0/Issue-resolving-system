@@ -32,6 +32,9 @@ namespace GodHatesMe
         }
         public DbSet<GodHatesMe.Models.TeacherViewModel> TeacherViewModel { get; set; } = default!;
         public DbSet<GodHatesMe.Models.ModuleViewModel> ModuleViewModel { get; set; } = default!;
+        public DbSet<GodHatesMe.Models.SemesterViewModel> SemesterViewModel { get; set; } = default!;
+        public DbSet<GodHatesMe.Models.ProgramViewModel> ProgramViewModel { get; set; } = default!;
+        public DbSet<GodHatesMe.Models.IntakeViewModel> IntakeViewModel { get; set; } = default!;
     }
 
     public class Module
