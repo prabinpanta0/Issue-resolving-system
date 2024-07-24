@@ -1,30 +1,30 @@
 ﻿namespace GodHatesMe.Models
 {
-    public class ModuleViewModel
+    public class ModuleViewModel //Done
     {
         public int Id { get; set; }
         public string Name { get; set; }
     }
 
-    public class ProgramViewModel
+    public class ProgramViewModel //Done
     {
         public int Id { get; set; }
         public string Name { get; set; }
     }
 
-    public class SemesterViewModel
+    public class SemesterViewModel //Done
     {
         public int Id { get; set; }
         public string Name { get; set; }
     }
 
-    public class IntakeViewModel
+    public class IntakeViewModel //Done
     {
         public int Id { get; set; }
         public string Name { get; set; }
     }
 
-    public class SectionViewModel
+    public class SectionViewModel 
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -54,7 +54,7 @@
         public int ModuleId { get; set; }
     }
 
-    public class QuestionViewModel
+    public class QuestionViewModel //Done
     {
         public int Id { get; set; }
         public string Text1 { get; set; }

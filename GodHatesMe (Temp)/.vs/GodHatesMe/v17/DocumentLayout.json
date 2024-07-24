@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\views\\main\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:views\\main\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\controllers\\gotohell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:controllers\\gotohell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\controllers\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:controllers\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\views\\main\\addprogram.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:views\\main\\addprogram.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\models\\indexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:models\\indexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\models\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:models\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\views\\main\\addteacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -13,18 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\godhatesme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:godhatesme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\models\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:models\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\controllers\\gotohell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|solutionrelative:controllers\\gotohell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|GodHatesMe.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\godhatesme (temp)\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -38,7 +50,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Main\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Main\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Main\\Index.cshtml",
+              "RelativeToolTip": "Views\\Main\\Index.cshtml",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAIwG0AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T10:01:57.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IndexViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Models\\IndexViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\IndexViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Models\\IndexViewModel.cs",
+              "RelativeToolTip": "Models\\IndexViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T10:00:35.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddProgram.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Main\\AddProgram.cshtml",
+              "RelativeDocumentMoniker": "Views\\Main\\AddProgram.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Main\\AddProgram.cshtml",
+              "RelativeToolTip": "Views\\Main\\AddProgram.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T09:46:43.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Controllers\\Main.cs",
+              "RelativeDocumentMoniker": "Controllers\\Main.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Controllers\\Main.cs",
+              "RelativeToolTip": "Controllers\\Main.cs",
+              "ViewState": "AQIAALwAAAAAAAAAAADwv8gAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T08:31:51.934Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,59 +144,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddTeacher.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Main\\AddTeacher.cshtml",
-              "RelativeDocumentMoniker": "Views\\Main\\AddTeacher.cshtml",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Main\\AddTeacher.cshtml",
-              "RelativeToolTip": "Views\\Main\\AddTeacher.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T08:50:12.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Controllers\\Main.cs",
-              "RelativeDocumentMoniker": "Controllers\\Main.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Controllers\\Main.cs",
-              "RelativeToolTip": "Controllers\\Main.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAIwEUAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T08:31:51.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Gotohell.cs",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Controllers\\Gotohell.cs",
-              "RelativeDocumentMoniker": "Controllers\\Gotohell.cs",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Controllers\\Gotohell.cs",
-              "RelativeToolTip": "Controllers\\Gotohell.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAowBQAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T08:47:40.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Models\\ViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ViewModel.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Models\\ViewModel.cs",
               "RelativeToolTip": "Models\\ViewModel.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAA2wDUAAAAbAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAwwBoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T08:16:36.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
+              "Title": "AddTeacher.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Main\\AddTeacher.cshtml",
+              "RelativeDocumentMoniker": "Views\\Main\\AddTeacher.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Main\\AddTeacher.cshtml",
+              "RelativeToolTip": "Views\\Main\\AddTeacher.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T08:50:12.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Gotohell.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Controllers\\Gotohell.cs",
+              "RelativeDocumentMoniker": "Controllers\\Gotohell.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Controllers\\Gotohell.cs",
+              "RelativeToolTip": "Controllers\\Gotohell.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T08:47:40.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T06:08:15.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -138,28 +208,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "GodHatesMe.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\GodHatesMe.cs",
               "RelativeDocumentMoniker": "GodHatesMe.cs",
               "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\GodHatesMe.cs",
               "RelativeToolTip": "GodHatesMe.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAiwFYAAAAAAAAA",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAxwF8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T04:44:18.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\GodHatesMe (Temp)\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACIAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T06:08:15.862Z",
               "EditorCaption": ""
             }
           ]
