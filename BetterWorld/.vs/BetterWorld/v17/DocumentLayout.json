@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|BetterWorld.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\betterworld\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|BetterWorld.csproj|solutionrelative:controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|BetterWorld.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\betterworld\\views\\feedback\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|BetterWorld.csproj|solutionrelative:views\\feedback\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|BetterWorld.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\betterworld\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|BetterWorld.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|BetterWorld.csproj|c:\\users\\user\\onedrive\\desktop\\hackthon\\issue-resolving-system\\betterworld\\betterworlddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D570E609-72C3-4969-A234-540F734E51E6}|BetterWorld.csproj|solutionrelative:betterworlddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,12 +65,47 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FeedbackController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\Controllers\\FeedbackController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FeedbackController.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\Controllers\\FeedbackController.cs",
+              "RelativeToolTip": "Controllers\\FeedbackController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAuwCQAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T05:24:39.13Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\Views\\Feedback\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Feedback\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\Views\\Feedback\\Index.cshtml",
+              "RelativeToolTip": "Views\\Feedback\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T05:23:38.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T05:19:05.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "BetterWorldDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\BetterWorldDbContext.cs",
               "RelativeDocumentMoniker": "BetterWorldDbContext.cs",
@@ -71,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FeedbackViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\Hackthon\\Issue-resolving-system\\BetterWorld\\Models\\FeedbackViewModel.cs",
               "RelativeDocumentMoniker": "Models\\FeedbackViewModel.cs",
@@ -79,7 +126,8 @@
               "RelativeToolTip": "Models\\FeedbackViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T04:27:50.477Z"
+              "WhenOpened": "2024-07-24T04:27:50.477Z",
+              "EditorCaption": ""
             }
           ]
         }
