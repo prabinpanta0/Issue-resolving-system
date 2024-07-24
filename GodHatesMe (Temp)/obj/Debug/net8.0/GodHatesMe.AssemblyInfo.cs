@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GodHatesMe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39b4123353ea2d75e81218010dea5e34baebb2b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34f762432b4f602bd4b8e00188b65cf4b1bb71b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("GodHatesMe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GodHatesMe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
