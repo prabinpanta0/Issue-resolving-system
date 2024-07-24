@@ -7,7 +7,7 @@ namespace BetterWorld
 {
     public class BetterWorldDbContext : DbContext
     {
-        public DbSet<Feedback> Organizations { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
         public string DbPath { get; }
         public BetterWorldDbContext()
         {

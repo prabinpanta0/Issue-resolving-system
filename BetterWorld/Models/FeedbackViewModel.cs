@@ -1,4 +1,6 @@
-﻿namespace BetterWorld.Models
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace BetterWorld.Models
 {
     public class FeedbackViewModel
     {
@@ -13,5 +15,13 @@
         public string Module { get; set; }
         public string Misc { get; set; }
 
+    }
+    public class PaginatedFeedbackViewModel : PageModel
+    {
+        public int CurrentPage { get; set; }
+        public int PageSize { get; set; }
+        public int Count { get; set; }
+        public int TotalPages => (int)Math.Ceiling(Decimal.Divide(Count, PageSize));
+        public List<FeedbackViewModel> Data { get; set; }
     }
 }

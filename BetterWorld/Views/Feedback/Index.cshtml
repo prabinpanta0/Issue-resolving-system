@@ -1,7 +1,7 @@
-﻿@model IEnumerable<BetterWorld.Models.FeedbackViewModel>
+﻿@model BetterWorld.Models.PaginatedFeedbackViewModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "FeedBackForm";
 }
 
 <h1>Index</h1>
@@ -13,37 +13,26 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Program)
+                Program
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Intake)
+                Intake
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Level)
+                Level
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Section)
+                Section
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Semester)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Points)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tutor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Module)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Misc)
+                Semester
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model.Data)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Program)
@@ -61,18 +50,6 @@
                 @Html.DisplayFor(modelItem => item.Semester)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Points)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tutor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Module)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Misc)
-            </td>
-            <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
@@ -81,3 +58,14 @@
 }
     </tbody>
 </table>
+
+<div>
+    <ul class="pagination">
+        @for (var i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                <a asp-page="/pagination" asp-route-currentpage="@i" class="page-btn">@i</a>
+            </li>
+        }
+    </ul>
+</div>

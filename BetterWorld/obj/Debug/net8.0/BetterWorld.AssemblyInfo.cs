@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BetterWorld")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ac54e498c48dff5fe627f2e551963c9debd338a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d5d254cd4a5b7e6a2ba08c36f2ccea32c1e3108")]
 [assembly: System.Reflection.AssemblyProductAttribute("BetterWorld")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BetterWorld")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
