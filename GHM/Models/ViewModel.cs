@@ -162,5 +162,8 @@ namespace GHM.Models
         /// Gets or sets the answer to question 4.
         public string Answer4 { get; set; }
         
+        public List<ModuleViewModel> Modules { get; set; }
+        public List<TeacherViewModel> Teachers { get; set; }
+        public List<FeedbackQuestionViewModel> FeedbackQuestions { get; set; }
     }
 }

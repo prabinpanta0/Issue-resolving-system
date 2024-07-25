@@ -29,8 +29,8 @@
                 <div class="card-body">
                     <h5 class="card-title">Teachers</h5>
                     <p class="card-text">No of Teachers: @Model.Teachers.Count</p>
-                    <a asp-action="Index" asp-controller="Teacher" class="btn btn-primary">View Teachers</a>
-                    <a asp-action="Create" asp-controller="Teacher" class="btn btn-primary">Add Teacher</a>
+                    <a asp-action="TeacherList" asp-controller="All" class="btn btn-primary">View Teachers</a>
+                    <a asp-action="CreateTeacher" asp-controller="All" class="btn btn-primary">Add Teacher</a>
                 </div>
             </div>
         </div>
@@ -40,8 +40,8 @@
                 <div class="card-body">
                     <h5 class="card-title">FeedBack Questions</h5>
                     <p class="card-text">No of FeedBack Questions: @Model.FeedbackQuestions.Count</p>
-                    <a asp-action="Index" asp-controller="FeedBackQuestion" class="btn btn-primary">View FeedBack Questions</a>
-                    <a asp-action="Create" asp-controller="FeedBackQuestion" class="btn btn-primary">Add FeedBack Question</a>
+                    <a asp-action="FeedbackQuestionList" asp-controller="All" class="btn btn-primary">View FeedBack Questions</a>
+                    <a asp-action="CreateFeedBackQuestion" asp-controller="All" class="btn btn-primary">Add FeedBack Question</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                     <h5 class="card-title">FeedBack Answers</h5>
                     <p class="card-text">No of FeedBack Answers: @Model.Feedbacks.Count</p>
                     <a asp-action="Index" asp-controller="FeedBackAnswer" class="btn btn-primary">View FeedBack Answers</a>
-                    <a asp-action="Create" asp-controller="FeedBackAnswer" class="btn btn-primary">Add FeedBack Answer</a>
+                    <a asp-action="FeedbackForm" asp-controller="All" class="btn btn-primary">Add FeedBack Answer</a>
                 </div>
             </div>
         </div>

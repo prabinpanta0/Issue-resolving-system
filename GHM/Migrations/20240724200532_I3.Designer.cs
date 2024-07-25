@@ -3,6 +3,7 @@ using System;
 using GHM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GHM.Migrations
 {
     [DbContext(typeof(GhmDbContext))]
-    partial class GhmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240724200532_I3")]
+    partial class I3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.7");
@@ -54,6 +57,15 @@ namespace GHM.Migrations
                     b.Property<int>("FeedbackQuestionId1")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("Module1Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Module2Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Module3Id")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("ModuleId1")
                         .HasColumnType("INTEGER");
 
@@ -90,6 +102,12 @@ namespace GHM.Migrations
                     b.HasIndex("FeedbackQuestion3Id");
 
                     b.HasIndex("FeedbackQuestion4Id");
+
+                    b.HasIndex("Module1Id");
+
+                    b.HasIndex("Module2Id");
+
+                    b.HasIndex("Module3Id");
 
                     b.HasIndex("Teacher1Id");
 
@@ -364,6 +382,24 @@ namespace GHM.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("GHM.Module", "Module1")
+                        .WithMany()
+                        .HasForeignKey("Module1Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GHM.Module", "Module2")
+                        .WithMany()
+                        .HasForeignKey("Module2Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GHM.Module", "Module3")
+                        .WithMany()
+                        .HasForeignKey("Module3Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("GHM.Teacher", "Teacher1")
                         .WithMany()
                         .HasForeignKey("Teacher1Id")
@@ -389,6 +425,12 @@ namespace GHM.Migrations
                     b.Navigation("FeedbackQuestion3");
 
                     b.Navigation("FeedbackQuestion4");
+
+                    b.Navigation("Module1");
+
+                    b.Navigation("Module2");
+
+                    b.Navigation("Module3");
 
                     b.Navigation("Teacher1");
 
