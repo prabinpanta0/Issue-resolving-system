@@ -3,8 +3,7 @@
 <!-- The Card Will Show The No of data in the database -->
 <!-- The Cards will have a button to view all the data of that particular card -->
 <!-- The Cards will have a button to add data to that particular card -->
-
-@model GHM.model.IndexViewModel
+@model GHM.Models.IndexViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -18,9 +17,9 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Modules</h5>
-                    <p class="card-text">No of Modules: @Model.ModuleCount</p>
-                    <a asp-action="Index" asp-controller="Module" class="btn btn-primary">View Modules</a>
-                    <a asp-action="Create" asp-controller="Module" class="btn btn-primary">Add Module</a>
+                    <p class="card-text">No of Modules: @Model.Modules.Count</p>
+                    <a asp-action="ModuleList" asp-controller="All" class="btn btn-primary">View Modules</a>
+                    <a asp-action="CreateModule" asp-controller="All" class="btn btn-primary">Add Module</a>
                 </div>
             </div>
         </div>
@@ -29,9 +28,9 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Teachers</h5>
-                    <p class="card-text">No of Teachers: @Model.TeacherCount</p>
-                    <a asp-action="Index" asp-controller="Teacher" class="btn btn-primary">View Teachers</a>
-                    <a asp-action="Create" asp-controller="Teacher" class="btn btn-primary">Add Teacher</a>
+                    <p class="card-text">No of Teachers: @Model.Teachers.Count</p>
+                    <a asp-action="TeacherList" asp-controller="All" class="btn btn-primary">View Teachers</a>
+                    <a asp-action="CreateTeacher" asp-controller="All" class="btn btn-primary">Add Teacher</a>
                 </div>
             </div>
         </div>
@@ -40,9 +39,9 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">FeedBack Questions</h5>
-                    <p class="card-text">No of FeedBack Questions: @Model.FeedBackQuestionCount</p>
-                    <a asp-action="Index" asp-controller="FeedBackQuestion" class="btn btn-primary">View FeedBack Questions</a>
-                    <a asp-action="Create" asp-controller="FeedBackQuestion" class="btn btn-primary">Add FeedBack Question</a>
+                    <p class="card-text">No of FeedBack Questions: @Model.FeedbackQuestions.Count</p>
+                    <a asp-action="FeedbackQuestionList" asp-controller="All" class="btn btn-primary">View FeedBack Questions</a>
+                    <a asp-action="CreateFeedBackQuestion" asp-controller="All" class="btn btn-primary">Add FeedBack Question</a>
                 </div>
             </div>
         </div>
@@ -50,11 +49,10 @@
         <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title
-                    ">FeedBack Answers</h5>
-                    <p class="card-text">No of FeedBack Answers: @Model.FeedBackAnswerCount</p>
+                    <h5 class="card-title">FeedBack Answers</h5>
+                    <p class="card-text">No of FeedBack Answers: @Model.Feedbacks.Count</p>
                     <a asp-action="Index" asp-controller="FeedBackAnswer" class="btn btn-primary">View FeedBack Answers</a>
-                    <a asp-action="Create" asp-controller="FeedBackAnswer" class="btn btn-primary">Add FeedBack Answer</a>
+                    <a asp-action="FeedbackForm" asp-controller="All" class="btn btn-primary">Add FeedBack Answer</a>
                 </div>
             </div>
         </div>

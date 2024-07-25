@@ -7,18 +7,18 @@ namespace GHM.Models
     {
         
         /// Gets or sets the list of modules.
-        public List<ModuleViewModel> Modules { get; set; }
+        public List<ModuleViewModel>? Modules { get; set; }
 
         
         /// Gets or sets the list of teachers.
-        public List<TeacherViewModel> Teachers { get; set; }
+        public List<TeacherViewModel>? Teachers { get; set; }
 
         
         /// Gets or sets the list of feedback questions.
-        public List<FeedbackQuestionViewModel> FeedbackQuestions { get; set; }
+        public List<FeedbackQuestionViewModel>? FeedbackQuestions { get; set; }
 
         
         /// Gets or sets the list of feedbacks.
-        public List<FeedbackViewModel> Feedbacks { get; set; }
+        public List<FeedbackViewModel>? Feedbacks { get; set; }
     }
 }

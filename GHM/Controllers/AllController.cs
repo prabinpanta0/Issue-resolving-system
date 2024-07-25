@@ -1,6 +1,9 @@
 using GHM.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+//using Microsoft.AspNetCore.Mvc;
+
 
 namespace GHM.Controllers
 {
@@ -26,7 +29,7 @@ namespace GHM.Controllers
                 };
                 db.Modules.Add(mod);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ModuleList");
             }
             catch{
                 return View();
@@ -44,8 +47,8 @@ namespace GHM.Controllers
                 Id = m.Id,
                 Name = m.Name
             }).ToList();
-            
 
+            ViewBag.Module = modules;
             return View();
         }
 
@@ -97,18 +100,16 @@ namespace GHM.Controllers
             }
         }
 
+
         /// Controller For Feedback Creatation
         /// 
-        public IActionResult Feedback()
+        public IActionResult FeedbackForm()
         {
-            ///show Teacher, Module and FeedbackQuestion list
-            /// To show the user the list of teachers, modules and feedback questions and Insert the feedback
-            var db = new GhmDbContext();
-
             var teachers = db.Teachers.Select(t => new TeacherViewModel
             {
                 Id = t.Id,
-                Name = t.Name
+                Name = t.Name,
+                ModuleId = t.ModuleId
             }).ToList();
 
             var modules = db.Modules.Select(m => new ModuleViewModel
@@ -125,30 +126,29 @@ namespace GHM.Controllers
                 Q3 = fq.Q3,
                 Q4 = fq.Q4
             }).ToList();
-        
-            ViewBag.Teachers = teachers;
-            ViewBag.Modules = modules;
-            ViewBag.FeedbackQuestions = feedbackQuestions;
-            return View();
+
+            var viewModel = new FeedbackViewModel
+            {
+                FeedbackQuestions = feedbackQuestions,
+                Modules = modules,
+                Teachers = teachers
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Feedback(FeedbackViewModel feedback)
+        public IActionResult FeedbackForm(FeedbackViewModel feedback)
         {
-            try{
-                var feed = new Feedback()
+            if (ModelState.IsValid)
+            {
+                var feed = new Feedback
                 {
                     TeacherId1 = feedback.TeacherId1,
                     TeacherId2 = feedback.TeacherId2,
                     TeacherId3 = feedback.TeacherId3,
-                    ModuleId2 = feedback.ModuleId1,
-                    ModuleId1 = feedback.ModuleId2,
-                    ModuleId3 = feedback.ModuleId3,
                     FeedbackQuestionId1 = feedback.FeedbackQuestionId1,
-                    FeedbackQuestionId2 = feedback.FeedbackQuestionId2,
-                    FeedbackQuestionId3 = feedback.FeedbackQuestionId3,
-                    FeedbackQuestionId4 = feedback.FeedbackQuestionId4,
                     Answer1 = feedback.Answer1,
                     Answer2 = feedback.Answer2,
                     Answer3 = feedback.Answer3,
@@ -159,11 +159,8 @@ namespace GHM.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch{
-                return View();
-            }
+            return View(feedback);
         }
-
 
         /// Controller For Index
         /// shows the No of modules, teachers, feedback questions and feedbacks
@@ -171,17 +168,32 @@ namespace GHM.Controllers
         public IActionResult Index()
         {
             var db = new GhmDbContext();
-            var modules = db.Modules.Count();
-            var teachers = db.Teachers.Count();
-            var feedbackQuestions = db.FeedbackQuestions.Count();
-            var feedbacks = db.Feedbacks.Count();
+            var modules = db.Modules.ToList();
+            var teachers = db.Teachers.ToList();
+            var feedbackQuestions = db.FeedbackQuestions.ToList();
+            var feedbacks = db.Feedbacks.ToList();
 
-            ViewBag.Modules = modules;
-            ViewBag.Teachers = teachers;
-            ViewBag.FeedbackQuestions = feedbackQuestions;
-            ViewBag.Feedbacks = feedbacks;
+            var viewModel = new IndexViewModel
+            {
+                Modules = modules.Select(m => new ModuleViewModel
+                {
+                    // Map properties from Module to ModuleViewModel
+                }).ToList(),
+                Teachers = teachers.Select(t => new TeacherViewModel
+                {
+                    // Map properties from Teacher to TeacherViewModel
+                }).ToList(),
+                FeedbackQuestions = feedbackQuestions.Select(fq => new FeedbackQuestionViewModel
+                {
+                    // Map properties from FeedbackQuestion to FeedbackQuestionViewModel
+                }).ToList(),
+                Feedbacks = feedbacks.Select(f => new FeedbackViewModel
+                {
+                    // Map properties from Feedback to FeedbackViewModel
+                }).ToList()
+            };
 
-            return View();
+            return View(viewModel);
         }
 
         /// Controller For Module List
@@ -204,11 +216,16 @@ namespace GHM.Controllers
         /// 
         public IActionResult TeacherList()
         {
-            var db = new GhmDbContext();
-            var teachers = db.Teachers.Select(t => new TeacherViewModel
+            var teachers = db.Teachers
+            .Include(m => m.Module)
+            .Select(
+                t => new TeacherViewModel()
             {
                 Id = t.Id,
-                Name = t.Name
+                Name = t.Name,
+                ModuleId = t.ModuleId,
+                Module = t.Module.Name
+                
             }).ToList();
 
             return View(teachers);
@@ -235,7 +252,7 @@ namespace GHM.Controllers
         /// Controller For Feedback List
         /// shows the list of feedbacks
         /// 
-        public IActionResult FeedbackList()
+        public IActionResult Feedbacks()
         {
             var db = new GhmDbContext();
             var feedbacks = db.Feedbacks.Select(f => new FeedbackViewModel
@@ -248,9 +265,9 @@ namespace GHM.Controllers
                 ModuleId2 = f.ModuleId2,
                 ModuleId3 = f.ModuleId3,
                 FeedbackQuestionId1 = f.FeedbackQuestionId1,
-                FeedbackQuestionId2 = f.FeedbackQuestionId2,
-                FeedbackQuestionId3 = f.FeedbackQuestionId3,
-                FeedbackQuestionId4 = f.FeedbackQuestionId4,
+                FeedbackQuestionId2 = f.FeedbackQuestionId1,
+                FeedbackQuestionId3 = f.FeedbackQuestionId1,
+                FeedbackQuestionId4 = f.FeedbackQuestionId1,
                 Answer1 = f.Answer1,
                 Answer2 = f.Answer2,
                 Answer3 = f.Answer3,

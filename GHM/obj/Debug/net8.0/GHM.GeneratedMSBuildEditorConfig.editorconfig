@@ -26,12 +26,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\OneDrive\Desktop\Hackthon\Issue-resolving-system\GHM
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/CreateFeedbackQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXENyZWF0ZUZlZWRiYWNrUXVlc3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/CreateModule.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXENyZWF0ZU1vZHVsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/CreateTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXENyZWF0ZVRlYWNoZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/FeedbackForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXEZlZWRiYWNrRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/FeedbackQuestionList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXEZlZWRiYWNrUXVlc3Rpb25MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/FeedbackSubmitted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXEZlZWRiYWNrU3VibWl0dGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/ModuleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXE1vZHVsZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/All/TeacherList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsXFRlYWNoZXJMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/Home/Index.cshtml]
