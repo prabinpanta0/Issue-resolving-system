@@ -8,7 +8,8 @@ namespace GHM.Controllers
 {
    public class UserContoller: Microsoft.AspNetCore.Mvc.Controller
     {
-        public IActionResult Index()
+        GhmDbContext db = new GhmDbContext();
+        public IActionResult Register()
         {
             return View();
         }
