@@ -1,0 +1,45 @@
+<!-- Page to display the status issues -->
+@model IEnumerable<GHM.Models.ResolvedIssuesViewModel>
+
+@{
+    ViewData["Title"] = "Issue Status";
+}
+
+<h1>Issues status</h1>
+
+<!-- Container for the issues Status-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IssueTitle)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Status)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IssueTitle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<div class="row">
+        <div class="col-md-12">
+            <a asp-action="Index">Back to List</a>
+</div>

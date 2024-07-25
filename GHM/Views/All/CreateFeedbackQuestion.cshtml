@@ -1,0 +1,48 @@
+﻿@model GHM.Models.FeedbackQuestionViewModel
+
+@{
+    ViewData["Title"] = "CreateFeedbackQuestion";
+}
+
+<h1>CreateFeedbackQuestion</h1>
+
+<h4>FeedbackQuestionViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateFeedbackQuestion">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Q1" class="control-label"></label>
+                <input asp-for="Q1" class="form-control" />
+                <span asp-validation-for="Q1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Q2" class="control-label"></label>
+                <input asp-for="Q2" class="form-control" />
+                <span asp-validation-for="Q2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Q3" class="control-label"></label>
+                <input asp-for="Q3" class="form-control" />
+                <span asp-validation-for="Q3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Q4" class="control-label"></label>
+                <input asp-for="Q4" class="form-control" />
+                <span asp-validation-for="Q4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
