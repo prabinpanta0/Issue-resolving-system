@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace GHM.Controllers
 {
-    public class All : Controller
+    public class All : Microsoft.AspNetCore.Mvc.Controller
     {
         GhmDbContext db = new GhmDbContext();
 

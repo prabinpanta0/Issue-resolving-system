@@ -10,6 +10,7 @@ namespace GHM
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<FeedbackQuestion> FeedbackQuestions { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<Issue> Issues { get; set; }
         public string DbPath { get; }
 
         public GhmDbContext()
@@ -28,6 +29,7 @@ namespace GHM
         public DbSet<GHM.Models.TeacherViewModel> TeacherViewModel { get; set; } = default!;
         public DbSet<GHM.Models.FeedbackQuestionViewModel> FeedbackQuestionViewModel { get; set; } = default!;
         public DbSet<GHM.Models.FeedbackViewModel> FeedbackViewModel { get; set; } = default!;
+        public DbSet<GHM.Models.IssueViewModel> IssueViewModel { get; set; } = default!;
     }
 
     public class Module
@@ -91,5 +93,12 @@ namespace GHM
 
         // [ForeignKey("Teacher3")]
         // public int TeacherId3 { get; set; }
+    }
+
+    public class Issue{
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string RecommendedSolution { get; set; }
     }
 }
