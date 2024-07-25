@@ -36,7 +36,7 @@ namespace GHM.Controller
                 var resolvedIssue = new ResolvedIssues()
                 {
                     IssueId = iss.Id,
-                    Status = "pending"
+                    Status = "Pending"
                 };
                 db.ResolvedIssues.Add(resolvedIssue);
                 db.SaveChanges();
@@ -53,7 +53,7 @@ namespace GHM.Controller
         public IActionResult IssueList()
         {
             var issues = db.Issues
-            .Include(i => i.ResolvedIssues)
+            // .Include(i => i.ResolvedIssues)
             .Select(i => new IssueViewModel
             {
                 Id = i.Id,
@@ -61,7 +61,7 @@ namespace GHM.Controller
                 Category = i.Category,
                 Description = i.Description,
                 RecommendedSolution = i.RecommendedSolution,
-                Status = i.resolvedIssues.Status
+                // Status = i.resolvedIssues.Status
             }).ToList();
 
             return View(issues);
@@ -118,14 +118,15 @@ namespace GHM.Controller
         /// 
         public IActionResult EditStatus(int id)
         {
-            var resolvedIssue = db.ResolvedIssues.Where(r => r.Id == id).FirstOrDefault();
-            var issue = new ResolvedIssuesViewModel()
+            var issue = db.ResolvedIssues
+            .Include(r => r.Issue)
+            .Select(r => new ResolvedIssuesViewModel()
             {
-                Id = resolvedIssue.Id,
-                IssueId = resolvedIssue.IssueId,
-                Status = resolvedIssue.Status,
-                IssueTitle = resolvedIssue.Issue.Title
-            };
+                Id = r.Id,
+                IssueId = r.IssueId,
+                Status = r.Status,
+                IssueTitle = r.Issue.Title
+            }).FirstOrDefault();
 
             return View(issue);
         }
@@ -136,13 +137,52 @@ namespace GHM.Controller
         {
             try{
                 var issue = db.ResolvedIssues.Where(r => r.Id == id).FirstOrDefault();
-                issue.Status = resolvedIssue.Status;
+                if (resolvedIssue != null)
+                {
+                    issue.Status = resolvedIssue.Status;
+                }
                 db.SaveChanges();
                 return RedirectToAction("ResolvedIssues");
             }
             catch{
                 return View();
             }
+        }
+
+        /// Index Page For Issues
+        /// Show the Summary of the Issues
+        /// No of Issues
+        /// No of Resolved Issues
+        /// No of Pending Issues
+        /// No of Closed Issues
+        /// No of Issues in Each Category
+        ///
+        public IActionResult Index()
+        {
+            var CIssues = db.Issues.ToList().Count;
+            var resolvedIssues = db.ResolvedIssues.Where(r => r.Status == "Resolved").ToList();
+            var pendingIssues = db.ResolvedIssues.Where(r => r.Status == "Pending").ToList();
+            var closedIssues = db.ResolvedIssues.Where(r => r.Status == "Closed").ToList();
+            var issuesByCategory = db.Issues.GroupBy(i => i.Category).Select(i => new CategorySummary()
+            {
+                Category = i.Key,
+                Count = i.Count(),
+                /// Add the Count of the Issues in Each Category
+                /// 
+                //Tcount = db.Issues.Where(c => c.Category == i.Key).Count()
+
+            }).ToList();
+
+            var issuesSummary = new IssuesSummaryViewModel()
+            {
+                TotalIssues = CIssues,
+                ResolvedIssuesCount = resolvedIssues.Count,
+                PendingIssuesCount = pendingIssues.Count,
+                ClosedIssuesCount = closedIssues.Count,
+                IssuesByCategory = issuesByCategory
+            };
+
+            return View(issuesSummary);
         }
 
     }

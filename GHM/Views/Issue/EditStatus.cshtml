@@ -1,0 +1,46 @@
+@model GHM.Models.ResolvedIssuesViewModel
+@{
+    ViewData["Title"] = "EditStatus";
+}
+
+<h1>Edit Status</h1>
+<!-- Container -->
+<div class="container">
+    <!-- Row -->
+    <div class="row">
+        <!-- Column -->
+        <div class="col-md-4">
+            <!-- Form to edit the status of an issue -->
+            <form asp-action="EditStatus">
+                <!-- Validation summary -->
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!-- Form group for the status -->
+                <div class="form-group">
+                    <!-- Label for the status -->
+                    <label asp-for="Status" class="control-label"></label>
+                    <!-- Dropdown list for the status -->
+                    <select asp-for="Status" class="form-control">
+                        <!-- Options for the status -->
+                        <option value="Resolved">Resolved</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Closed">Closed</option>
+                    </select>
+                    <!-- Validation for the status -->
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+                <!-- Form group for the submit button -->
+                <div class="form-group">
+                    <!-- Submit button -->
+                    <input type="submit" value="Edit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}

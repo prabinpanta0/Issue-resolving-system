@@ -1,0 +1,39 @@
+@model GHM.Models.IssuesSummaryViewModel
+
+@{
+    ViewData["Title"] = "Issues Summary";
+}
+
+<h2>Issues Summary</h2>
+
+<div>
+    <p>Total Issues: @Model.TotalIssues</p>
+    <p>Resolved Issues: @Model.ResolvedIssuesCount</p>
+    <p>Pending Issues: @Model.PendingIssuesCount</p>
+    <p>Closed Issues: @Model.ClosedIssuesCount</p>
+</div>
+
+<h3>Issues by Category</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var categorySummary in Model.IssuesByCategory)
+        {
+            <tr>
+                <td>@categorySummary.Category</td>
+                <td>@categorySummary.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Go to Issues List -->
+<a asp-action="IssueList" class="btn btn-primary">View All Issues</a>
+
+<!-- Go to Resolved Issues -->
+<a asp-action="ResolvedIssues" class="btn btn-primary">View Issues Status</a>
