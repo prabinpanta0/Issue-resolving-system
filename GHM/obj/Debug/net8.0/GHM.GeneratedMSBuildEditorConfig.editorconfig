@@ -74,8 +74,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcQ3JlYXRlSXNzdWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/Issue/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/Issue/IssueList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcSXNzdWVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/Issue/ResolvedIssues.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcUmVzb2x2ZWRJc3N1ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/OneDrive/Desktop/Hackthon/Issue-resolving-system/GHM/Views/Shared/Error.cshtml]
