@@ -1,0 +1,40 @@
+/* AIndex.css */
+
+/* Main Container */
+.container {
+    margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #1C5792;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    text-align: center;
+    background-color: #F9F9F9;
+    border-radius: 15px;
+}
+
+.card-title {
+    color: #1C5792;
+    font-weight: bold;
+}
+
+.card-text {
+    margin: 10px 0;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #F1802B;
+    border: none;
+    margin: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #1C5792;
+    border: none;
+}

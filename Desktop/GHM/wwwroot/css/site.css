@@ -1,10 +1,16 @@
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -39,4 +45,8 @@ body {
 .btn:hover{
   background: #b86322;
   color: white;
+}
+
+.loli{
+  cursor: pointer;
 }

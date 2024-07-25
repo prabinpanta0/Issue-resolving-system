@@ -1,0 +1,126 @@
+/* AIndex.css */
+
+/* Main Container */
+.container {
+    margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #1C5792;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    text-align: center;
+    background-color: #F9F9F9;
+}
+
+.card-title {
+    color: #1C5792;
+    font-weight: bold;
+}
+
+.card-text {
+    margin: 10px 0;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #1C5792;
+    border: none;
+    margin: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #F1802B;
+    border: none;
+}
+
+/* Table Styles */
+.table {
+    border: 1px solid #1C5792;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #F9F9F9;
+}
+
+.table th {
+    background-color: #1C5792;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+.table td {
+    padding: 10px;
+    border-top: 1px solid #1C5792;
+}
+
+.table a {
+    color: #1C5792;
+    text-decoration: none;
+}
+
+.table a:hover {
+    color: #F1802B;
+}
+
+/* Page Header */
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+/* Create New Link */
+.create-link {
+    color: #1C5792;
+    text-decoration: none;
+    background-color: #F9F9F9;
+    border: 1px solid #1C5792;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.create-link:hover {
+    background-color: #F1802B;
+    color: white;
+    border: none;
+}
+
+/* Back to List Link */
+.back-link {
+    color: #1C5792;
+    text-decoration: none;
+    background-color: #F9F9F9;
+    border: 1px solid #1C5792;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.back-link:hover {
+    background-color: #F1802B;
+    color: white;
+    border: none;
+}
+
+/* Button Styles */
+.btn-custom {
+    color: #1C5792;
+    text-decoration: none; /* Removes underline */
+    background-color: white; /* Blue background */
+    border: 1px solid #1C5792; /* Blue border */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Align properly */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.btn-custom:hover {
+    background-color: #1C5792;; /* Orange background on hover */
+    color: white; /* White text on hover */
+    border: 1px solid #F1802B; /* Orange border on hover */
+}

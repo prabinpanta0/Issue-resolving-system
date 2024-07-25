@@ -4,6 +4,8 @@
     ViewData["Title"] = "Create Module";
 }
 
+<link rel="stylesheet" href="~/css/Create.css">
+
 <h1>Create Module</h1>
 
 <form asp-action="CreateModule">
@@ -14,10 +16,10 @@
     </div>
     
     <div class="form-group">
-        <input type="submit" value="CreateModule" class="btn btn-primary" />
+        <input type="submit" value="Create Module" class="btn-custom" />
     </div>
 </form>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a  class="btn-custom" asp-action="Index">Back to List</a>
 </div>

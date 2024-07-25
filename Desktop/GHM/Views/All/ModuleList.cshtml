@@ -4,10 +4,12 @@
     ViewData["Title"] = "ModuleList";
 }
 
-<h1>ModuleList</h1>
+<link rel="stylesheet" href="~/css/Module.css">
+
+<h1>Module List</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn-custom" asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -36,5 +38,5 @@
 </table>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn-custom" asp-action="Index">Back to List</a>
 </div>

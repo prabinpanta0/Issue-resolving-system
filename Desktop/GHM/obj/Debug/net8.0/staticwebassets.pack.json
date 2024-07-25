@@ -13,8 +13,20 @@
       "PackagePath": "staticwebassets\\Img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\AIndex.css",
+      "PackagePath": "staticwebassets\\css\\AIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\Create.css",
+      "PackagePath": "staticwebassets\\css\\Create.css"
+    },
+    {
       "Id": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\Module.css",
+      "PackagePath": "staticwebassets\\css\\Module.css"
     },
     {
       "Id": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\site.css",
