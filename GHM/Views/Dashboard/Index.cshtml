@@ -1,0 +1,35 @@
+<!-- Dashboard Page -->
+<!-- Shows 2 cards with Title (Feedback, Issue) -->
+<!-- The cards includes Title, description -->
+<!-- It includes basic animations -->
+<!-- When cards are clicked it's respective sites are opened -->
+
+@* @model GHM.Models.DashBoardViewModel *@
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Feedback</h5>
+                    <p class="card-text">Feedbacks are the most important part of the system. It helps to improve the system.</p>
+                    <a asp-action="Index" asp-controller="All" class="btn btn-primary">View Feedbacks</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title
+                    ">Issue</h5>
+                    <p class="card-text">Issues are the problems that are faced by the users. It is important to resolve the issues as soon as possible.</p>
+                    <a asp-action="Index" asp-controller="Issue" class="btn btn-primary">View Issues</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
