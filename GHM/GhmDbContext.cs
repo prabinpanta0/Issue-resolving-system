@@ -11,6 +11,7 @@ namespace GHM
         public DbSet<FeedbackQuestion> FeedbackQuestions { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Issue> Issues { get; set; }
+        public DbSet<ResolvedIssues> ResolvedIssues { get; set; }
         public string DbPath { get; }
 
         public GhmDbContext()
@@ -30,6 +31,7 @@ namespace GHM
         public DbSet<GHM.Models.FeedbackQuestionViewModel> FeedbackQuestionViewModel { get; set; } = default!;
         public DbSet<GHM.Models.FeedbackViewModel> FeedbackViewModel { get; set; } = default!;
         public DbSet<GHM.Models.IssueViewModel> IssueViewModel { get; set; } = default!;
+        public DbSet<GHM.Models.ResolvedIssuesViewModel> ResolvedIssuesViewModel { get; set; } = default!;
     }
 
     public class Module
@@ -98,7 +100,15 @@ namespace GHM
     public class Issue{
         public int Id { get; set; }
         public string Title { get; set; }
+        public string Category { get; set; }
         public string Description { get; set; }
         public string RecommendedSolution { get; set; }
+    }
+
+    public class ResolvedIssues{
+        public int Id {get; set;}
+        public int IssueId {get; set;}
+        public string Status {get; set;} = "Pending";
+        public Issue Issue {get; set;}
     }
 }

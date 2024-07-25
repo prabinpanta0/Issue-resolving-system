@@ -3,6 +3,7 @@ using System;
 using GHM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GHM.Migrations
 {
     [DbContext(typeof(GhmDbContext))]
-    partial class GhmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240725033959_i6")]
+    partial class i6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.7");
@@ -330,28 +333,6 @@ namespace GHM.Migrations
                     b.ToTable("ModuleViewModel");
                 });
 
-            modelBuilder.Entity("GHM.Models.ResolvedIssuesViewModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("IssueId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("IssueTitle")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ResolvedIssuesViewModel");
-                });
-
             modelBuilder.Entity("GHM.Models.TeacherViewModel", b =>
                 {
                     b.Property<int>("Id")
@@ -392,26 +373,6 @@ namespace GHM.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Modules");
-                });
-
-            modelBuilder.Entity("GHM.ResolvedIssues", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("IssueId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IssueId");
-
-                    b.ToTable("ResolvedIssues");
                 });
 
             modelBuilder.Entity("GHM.Teacher", b =>
@@ -512,17 +473,6 @@ namespace GHM.Migrations
                     b.HasOne("GHM.Models.FeedbackViewModel", null)
                         .WithMany("Teachers")
                         .HasForeignKey("FeedbackViewModelId");
-                });
-
-            modelBuilder.Entity("GHM.ResolvedIssues", b =>
-                {
-                    b.HasOne("GHM.Issue", "Issue")
-                        .WithMany()
-                        .HasForeignKey("IssueId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Issue");
                 });
 
             modelBuilder.Entity("GHM.Teacher", b =>
