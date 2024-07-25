@@ -1,0 +1,81 @@
+﻿@model BetterWorld.Models.UserViewModel
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+
+@{
+    ViewData["Title"] = "Login";
+}
+<link rel="stylesheet" href="~/css/Login.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="logo">
+    <img src="~/Img/logo.png" alt="">
+</div>
+
+<div class="fcontainer" id="fcontainer">
+    <div class="form-container sign-up-container">
+        <form asp-action="Register" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h1>Register</h1>
+            <input asp-for="UserName" placeholder="Username" required="" />
+            <input asp-for="Password" type="password" placeholder="Password" required="" />
+
+            <select asp-for="AccountType">
+                <option value="">--Account type--</option>
+                <option value="Tutor">Tutor</option>
+                <option value="Student">Student</option>
+            </select>
+
+            <button value="Register">Register</button>
+        </form>
+    </div>
+
+    <div class="form-container sign-in-container">
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h1>Login</h1>
+            <input asp-for="UserName" placeholder="Username" required="" />
+            <input asp-for="Password" type="password" placeholder="Password" required="" />
+            <button value="Login">Login</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome to Register!</h1>
+                <p>Already have an account?</p>
+                <button class="ghost" id="signIn">Login</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Welcome to Login!</h1>
+                <p>Don’t have an account?</p>
+                <button class="ghost" id="signUp">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('fcontainer');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

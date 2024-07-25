@@ -1,0 +1,95 @@
+@model GHM.Models.FeedbackViewModel
+
+@{
+    ViewData["Title"] = "Feedback Form";
+}
+
+<h1>Feedback Form for Teacher Evaluation by Students</h1>
+
+@if (Model.Modules != null && Model.Modules.Count > 0 && Model.Teachers != null && Model.Teachers.Count > 0)
+{
+    <form asp-action="FeedbackForm" method="post">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Questions</th>
+                    @foreach (var module in Model.Modules)
+                    {
+                        var teacher = Model.Teachers.FirstOrDefault(t => t.ModuleId == module.Id);
+                        <th>@module.Name, @teacher?.Name</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.FeedbackQuestions.FirstOrDefault()?.Q1</td>
+                    @foreach (var Teachers in Model.Teachers)
+                    {
+                        <td>
+                            <select name="Answer1" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    }
+                </tr>
+                <tr>
+                    <td>@Model.FeedbackQuestions.FirstOrDefault()?.Q2</td>
+                    @foreach (var Teachers in Model.Teachers)
+                    {
+                        <td>
+                            <select name="Answer2" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    }
+                </tr>
+                <tr>
+                    <td>@Model.FeedbackQuestions.FirstOrDefault()?.Q3</td>
+                    @foreach (var Teachers in Model.Teachers)
+                    {
+                        <td>
+                            <select name="Answer3" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    }
+                </tr>
+                <tr>
+                    <td>@Model.FeedbackQuestions.FirstOrDefault()?.Q4</td>
+                    @foreach (var Teachers in Model.Teachers)
+                    {
+                        <td>
+                            <select name="Answer4" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+    </form>
+}
+else
+{
+    <p>No modules or teachers available to display.</p>
+}
