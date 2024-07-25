@@ -783,3 +783,4 @@ C:\Users\Sushan\Desktop\GHM\obj\Debug\net8.0\refint\GHM.dll
 C:\Users\Sushan\Desktop\GHM\obj\Debug\net8.0\GHM.pdb
 C:\Users\Sushan\Desktop\GHM\obj\Debug\net8.0\GHM.genruntimeconfig.cache
 C:\Users\Sushan\Desktop\GHM\obj\Debug\net8.0\ref\GHM.dll
+C:\Users\Sushan\Desktop\GHM\obj\Debug\net8.0\GHM.sourcelink.json

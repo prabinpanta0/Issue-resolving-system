@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
       "Id": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

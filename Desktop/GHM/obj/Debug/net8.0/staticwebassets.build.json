@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0/KwJVfq9Q1nr2WBoC4HKmTKHU1I1CNmYMTlJoXJB0E=",
+  "Hash": "3LNYfjMHLxHv2ADHkhcMmyfG7XoIXOZfDhf3CnRzFhc=",
   "Source": "GHM",
   "BasePath": "_content/GHM",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Sushan\\Desktop\\GHM\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GHM.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\Login.css",
+      "SourceId": "GHM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\",
+      "BasePath": "_content/GHM",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
       "Identity": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\site.css",
