@@ -5,8 +5,6 @@
 }
 
 <h1>CreateTeacher</h1>
-
-<h4>TeacherViewModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -23,16 +21,51 @@
                 <span asp-validation-for="ModuleId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input class="btn-custom" type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn-custom" asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<style>
+    h1, .control-label{
+        color: white;
+    }
+    /* Button Styles */
+    .btn-custom {
+        color: #1C5792;
+        margin: 10px 0px;
+        text-decoration: none;
+        /* Removes underline */
+        background-color: white;
+        /* Blue background */
+        border: 1px solid #1C5792;
+        /* Blue border */
+        padding: 10px 20px;
+        /* Padding */
+        border-radius: 5px;
+        /* Rounded corners */
+        display: inline-block;
+        /* Align properly */
+        transition: background-color 0.3s, color 0.3s;
+        /* Smooth transition */
+    }
+
+    .btn-custom:hover {
+        background-color: #1C5792;
+        ;
+        /* Orange background on hover */
+        color: white;
+        /* White text on hover */
+        border: 1px solid #F1802B;
+        /* Orange border on hover */
+    }
+</style>

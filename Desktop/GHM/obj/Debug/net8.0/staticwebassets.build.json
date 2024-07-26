@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vxWGs1uZ2WOHYWcYeKmVz/IlVYSctAa7OydGn47TPnw=",
+  "Hash": "qd4t7bYyHnnEItcgGC89JHmGWy5e3hEBkiBzQubVR10=",
   "Source": "GHM",
   "BasePath": "_content/GHM",
   "Mode": "Default",
@@ -72,25 +72,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\AIndex.css"
-    },
-    {
-      "Identity": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\Create.css",
-      "SourceId": "GHM",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\",
-      "BasePath": "_content/GHM",
-      "RelativePath": "css/Create.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Create.css"
     },
     {
       "Identity": "C:\\Users\\Sushan\\Desktop\\GHM\\wwwroot\\css\\Login.css",

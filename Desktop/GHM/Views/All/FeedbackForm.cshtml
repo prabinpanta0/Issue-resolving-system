@@ -4,7 +4,7 @@
     ViewData["Title"] = "Feedback Form";
 }
 
-<h1>Feedback Form for Teacher Evaluation by Students</h1>
+<h1 class="text-white">Feedback Form for Teacher Evaluation by Students</h1>
 
 @if (Model.Modules != null && Model.Modules.Count > 0 && Model.Teachers != null && Model.Teachers.Count > 0)
 {
@@ -91,5 +91,5 @@
 }
 else
 {
-    <p>No modules or teachers available to display.</p>
+    <p class="text-white">No modules or teachers available to display.</p>
 }
